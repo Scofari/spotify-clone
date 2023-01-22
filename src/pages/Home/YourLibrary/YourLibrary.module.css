@@ -1,0 +1,20 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	flex: 1;
+	height: 100vh;
+	color: white;
+	padding: 20px 32px;
+	background-color: #121212;
+}
+
+.wrapper h1 {
+	margin-bottom: 20px;
+}
+
+.libraryContainer {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 20px;
+}

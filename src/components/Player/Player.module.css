@@ -1,0 +1,71 @@
+.footerPlayer {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 90px;
+	bottom: 0;
+	padding: 0 16px;
+	background-color: #181818;
+	border-top: 1px solid#282828;
+}
+
+.audio {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.playerControls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 300px;
+	max-width: 850px;
+	width: 40%;
+}
+
+.playerControlsButtons {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5px;
+	gap: 25px;
+}
+
+.trackInfo {
+	position: absolute;
+	left: 19px;
+	display: flex;
+	align-items: center;
+	color: white;
+	font-size: 12px;
+}
+
+.trackInfo img {
+	height: 60px;
+	width: 60px;
+	object-fit: cover;
+}
+
+.trackInfo div:nth-of-type(2) {
+	margin-bottom: 20px;
+}
+
+.trackDescription {
+	max-width: 300px;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin: 0 16px;
+	text-overflow: ellipsis;
+}
+
+.trackDescription h4 {
+	text-overflow: ellipsis;
+	font-size: 15px;
+	color: white;
+}

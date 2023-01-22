@@ -1,0 +1,76 @@
+.wrapper {
+	width: 100%;
+	height: auto;
+}
+
+.trackListRow,
+.trackListPlayButton,
+.trackInfo,
+.songDuration {
+	display: flex;
+}
+
+.trackListRow {
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px 22px;
+	border-radius: 5px;
+}
+
+.trackListRow:hover {
+	background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+
+
+.trackListPlayButton {
+	position: relative;
+	align-items: center;
+	gap: 15px;
+	left: -5px;
+}
+
+.trackListPlayButton > span {
+	position: absolute;
+	left: 6px;
+	top: 7px;
+	color: #1ed760;
+}
+
+.trackListPlayButton > button {
+	background: transparent;
+	opacity: 0;
+}
+
+.trackListRow:hover .trackListPlayButton > span {
+	color: transparent;
+}
+
+.trackListRow:hover button {
+	opacity: 1;
+}
+
+.trackInfo {
+	align-items: center;
+	flex-direction: column;
+}
+
+.trackListPlayButton img {
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+}
+
+.trackInfo h4 {
+	color: #1ed760;
+}
+
+.songDuration {
+	align-items: center;
+	gap: 10px;
+}
+
+.songDuration svg {
+	position: relative;
+	bottom: 5px;
+}

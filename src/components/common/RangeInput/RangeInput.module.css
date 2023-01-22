@@ -1,0 +1,41 @@
+.inputRange {
+	-webkit-appearance: none;
+	height: 5px;
+	background: linear-gradient(
+		to right,
+		#fff 0%,
+		#fff var(--value),
+		#5e5e5e var(--value),
+		#5e5e5e 100%
+	);
+	border-radius: 5px;
+	outline: 0;
+}
+
+.inputRange:hover {
+	background: linear-gradient(
+		to right,
+		#1db954 0%,
+		#1db954 var(--value),
+		#5e5e5e var(--value),
+		#5e5e5e 100%
+	);
+}
+
+.inputRange::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.inputRange:hover::-webkit-slider-thumb {
+	background-color: #fff;
+}
+
+.inputRange::-webkit-slider-thumb:hover,
+.inputRange::-webkit-slider-thumb:active {
+	width: 15px;
+	height: 15px;
+}

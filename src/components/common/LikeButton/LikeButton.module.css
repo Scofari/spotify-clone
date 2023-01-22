@@ -1,0 +1,24 @@
+.likeButton {
+	display: flex;
+	position: relative;
+	cursor: pointer;
+	background-color: transparent;
+	outline: 0;
+	height: 0;
+}
+
+.likeButton svg {
+	stroke: rgb(173, 173, 173);
+	fill: transparent;
+	stroke-width: 2px;
+	margin-right: 20px;
+}
+
+.likeButton:hover svg {
+	stroke: white;
+}
+
+.likeButton.isLiked svg {
+	stroke: #1ed760;
+	fill: #1ed760;
+}

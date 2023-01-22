@@ -1,0 +1,49 @@
+.iconButton {
+	outline: 0;
+	background-color: transparent;
+	display: flex;
+	position: relative;
+	fill: #ccc;
+	height: 100%;
+}
+
+.iconButton.fill:not([disabled]):hover {
+	fill: white;
+}
+
+.iconButton.stroke:not([disabled]):hover {
+	stroke: white;
+}
+
+.iconButton.fill.active:not([disabled]) {
+	fill: white;
+}
+
+.iconButton.stroke.active:not([disabled]) {
+	stroke: white;
+}
+
+.scale:not([disabled]):hover {
+	transform: scale(1.06);
+}
+
+.isHighlighted svg {
+	fill: #1db954;
+	position: relative;
+}
+
+.iconButton.isHighlighted::after {
+	content: "";
+	position: absolute;
+	top: calc(100% - 5px);
+	left: 50%;
+	transform: translateX(-50%);
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #1db954;
+}
+
+.iconButton.isHighlighted:hover svg {
+	fill: #32d86c !important;
+}

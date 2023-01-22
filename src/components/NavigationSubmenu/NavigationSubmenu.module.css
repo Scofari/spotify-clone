@@ -1,0 +1,8 @@
+.navContainer {
+	padding-left: 30px;
+	margin-bottom: 20px;
+}
+
+.navContainer:last-child {
+	margin-bottom: 0px;
+}

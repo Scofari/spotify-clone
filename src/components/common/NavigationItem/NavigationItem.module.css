@@ -1,0 +1,29 @@
+.link {
+	text-decoration: none;
+	line-height: 3;
+	font-size: 14px;
+	font-weight: bold;
+	transition: color 0.2s linear;
+	display: flex;
+	align-items: center;
+	color: #b3b3b3;
+}
+
+.title {
+	color: inherit;
+}
+
+.navIcon {
+	font-size: 25px;
+	margin-right: 15px;
+}
+
+.link:hover,
+.navIcon:hover {
+	color: white;
+	fill: white;
+}
+
+li svg {
+	fill: #ccc;
+}

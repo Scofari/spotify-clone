@@ -1,0 +1,12 @@
+.notAllowed svg {
+	stroke: dimgrey;
+	cursor: not-allowed;
+}
+
+.pointer svg {
+	cursor: pointer;
+}
+
+.button {
+	background-color: transparent;
+}

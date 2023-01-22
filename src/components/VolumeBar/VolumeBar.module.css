@@ -1,0 +1,13 @@
+.volumeBar {
+	position: absolute;
+	top: 50%;
+	right: 16px;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.volumeBarRange {
+	width: 100px;
+}

@@ -1,0 +1,20 @@
+.optionsButton {
+	background-color: transparent;
+	outline: 0;
+	height: 0;
+}
+
+.optionsButton svg {
+	font-size: 25px;
+	fill: rgb(173, 173, 173);
+	stroke: rgb(173, 173, 173);
+}
+
+.optionsButton:hover svg {
+	stroke: white;
+	fill: white;
+}
+
+.left {
+	left: -20px;
+}

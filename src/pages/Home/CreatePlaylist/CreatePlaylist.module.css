@@ -1,0 +1,52 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	flex: 1;
+	height: 100vh;
+	color: white;
+}
+
+.searchContainer {
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px 32px;
+	background-color: #121212;
+}
+
+.input {
+	width: 360px;
+	background-color: #2d2d2d;
+	border-radius: 5px;
+	padding: 4px 0px;
+}
+
+.input div {
+	background-color: #2d2d2d;
+}
+
+.input div input {
+	background-color: #2d2d2d;
+	height: 35px;
+	font-weight: 600;
+	padding: 0 8px;
+	color: #ccc;
+	border: none;
+	outline: none;
+}
+
+.input div input::placeholder {
+	color: #ccc;
+}
+
+.titleBlock {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.titleBlock svg {
+	font-size: 30px;
+}

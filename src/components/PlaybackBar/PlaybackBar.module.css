@@ -1,0 +1,16 @@
+.playbackBar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+	width: 100%;
+}
+
+.playbackDuration {
+	font-size: 12px;
+	opacity: 0.8;
+}
+
+.playbackProgressBar {
+	width: 100%;
+}

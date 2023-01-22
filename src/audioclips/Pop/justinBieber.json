@@ -1,0 +1,58 @@
+[
+	{
+		"title": "What Do You Mean",
+		"author": "Justin Bieber",
+		"id": 80,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130340311203840/Justin_Bieber_-_What_Do_You_Mean__Official_MusicMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36"
+	},
+	{
+		"title": "Yummy",
+		"author": "Justin Bieber",
+		"id": 51,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129879637950464/Justin_Bieber_-_Yummy_Official_VideoMP3_128K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36"
+	},
+	{
+		"title": "Mistletoe",
+		"author": "Justin Bieber",
+		"id": 55,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129951695962142/Justin_Bieber_-_Mistletoe_Official_Music_VideoMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36"
+	},
+	{
+		"title": "Sorry",
+		"author": "Justin Bieber",
+		"id": 59,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130017793998848/Justin_Bieber_-_Sorry_Official_Lyric_VideoMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36"
+	},
+	{
+		"title": "I'll Show You",
+		"author": "Justin Bieber",
+		"id": 60,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130047695585310/Justin_Bieber_-_I_ll_Show_You_Official_Music_VideMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36"
+	},
+	{
+		"title": "Company",
+		"author": "Justin Bieber",
+		"id": 67,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130102266757120/Justin_Bieber_-_Company_Official_Music_VideoMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36"
+	},
+	{
+		"title": "Sorry (PURPOSE : The Movement)",
+		"author": "Justin Bieber",
+		"id": 68,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130111000477756/Justin_Bieber_-_Sorry_PURPOSE___The_MovementMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36"
+	},
+	{
+		"title": "One Less Lonely Girl",
+		"author": "Justin Bieber",
+		"id": 74,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130199692443678/Justin_Bieber_-_One_Less_Lonely_Girl_Official_MusMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36"
+	}
+]

@@ -1,0 +1,37 @@
+[
+	{
+		"title": "Together",
+		"author": "Marshmello",
+		"id": 75,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130204519694336/Marshmello_-_Together_Official_Music_VideoMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+	},
+	{
+		"title": "Alone",
+		"author": "Marshmello",
+		"id": 61,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130063050014732/Marshmello_-_Alone_Official_Music_VideoMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+	},
+	{
+		"title": "Summer",
+		"author": "Marshmello",
+		"id": 45,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129702650773544/Marshmello_-_Summer_Official_Music_Video_with_LeMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+	},
+	{
+		"title": "Here With Me Feat",
+		"author": "Marshmello",
+		"id": 41,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129612690948106/Marshmello_-_Here_With_Me_Feat._CHVRCHES_OfficialMP3_160K.mp3",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+	},
+	{
+		"title": "Freal Luv",
+		"author": "Marshmello",
+		"id": 38,
+		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129488972480532/Far_East_Movement_x_Marshmello_-_Freal_Luv_ft._Chanyeol__Tinashe_Official_Video.m4a",
+		"cover": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+	}
+]

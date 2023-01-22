@@ -1,0 +1,101 @@
+.wrapper {
+	height: 30vh;
+	max-height: 500px;
+	min-height: 290px;
+	padding: 32px 24px;
+
+	background: linear-gradient(#494949, rgba(0, 0, 0, 0.2));
+}
+
+.playlistCover,
+.playlistCover img {
+	width: 232px;
+	height: 232px;
+}
+
+.playlistCover {
+	background-color: #282828;
+	position: relative;
+	cursor: default;
+}
+
+.playlistCover:hover svg:nth-child(1) {
+	opacity: 0;
+}
+
+.playlistCover svg:nth-child(2) {
+	opacity: 0;
+}
+
+.playlistCover:hover svg:nth-child(2) {
+	opacity: 1;
+}
+
+.playlistCover span {
+	font-size: 16px;
+	font-weight: 600;
+	bottom: 30%;
+	left: 25%;
+	line-height: 1px;
+	opacity: 0;
+}
+
+.playlistCover:hover span {
+	opacity: 1;
+}
+
+.icon {
+	position: absolute;
+	bottom: 35%;
+	left: 35%;
+	fill: rgb(129, 129, 129);
+	font-size: 65px;
+}
+
+.playlistInfo,
+.playlistInfoTextDetails {
+	display: flex;
+}
+
+.playlistInfo {
+	align-items: center;
+	gap: 20px;
+}
+.playlistInfo h2 {
+	font-size: 14px;
+}
+
+.playlistInfoText > h1 {
+	font-size: 96px;
+	margin-bottom: 15px;
+}
+
+.playlistInfoTextDetails {
+	font-size: 14px;
+	font-weight: 600;
+	align-items: center;
+}
+
+.playlistInfoTextDetails a {
+	color: white;
+	text-decoration: none;
+	position: relative;
+}
+
+.playlistInfoTextDetails a:hover {
+	text-decoration: underline;
+}
+
+.playlistInfoTextDetails > span:before {
+	content: "•";
+	margin: 0 3px;
+	font-size: 15px;
+}
+
+.playlistAvatarArtist {
+	object-fit: cover;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	margin: 0 5px;
+}

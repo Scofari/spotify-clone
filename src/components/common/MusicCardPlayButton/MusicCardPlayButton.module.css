@@ -1,0 +1,30 @@
+.button {
+	position: absolute;
+	right: 20px;
+	bottom: 90px;
+	transform: scale(0.5);
+}
+
+.button svg {
+	fill: #1ed760;
+	stroke: #1ed760;
+	stroke-width: 20px;
+	height: 100%;
+}
+.button svg:hover {
+	transform: scale(1.06);
+	fill: #1be562;
+}
+
+.button svg:active {
+	/* fill: #0f8639; */
+	fill: #169c46;
+	transform: scale(1);
+}
+
+.button.fill.active:not([disabled]) {
+	fill: #1ed760;
+}
+.button.stroke.active:not([disabled]) {
+	stroke: #1ed760;
+}

@@ -1,0 +1,26 @@
+.SearchMusicCard {
+	position: relative;
+	border-radius: 10px;
+	width: 192px;
+	height: 192px;
+	cursor: pointer;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.SearchMusicCard img {
+	position: absolute;
+	bottom: 0;
+	right: -20px;
+	transform: rotate(20deg);
+	height: 100px;
+	width: 100px;
+	object-fit: cover;
+}
+
+.SearchMusicCard span {
+	text-align: center;
+	font-weight: bold;
+	font-size: 22px;
+	white-space: nowrap;
+}

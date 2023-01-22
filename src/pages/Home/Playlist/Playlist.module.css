@@ -1,0 +1,138 @@
+.playlist {
+	height: 150vh;
+	flex: 1;
+	color: white;
+	background: linear-gradient(#444444, rgba(0, 0, 0, 1));
+	padding: 0 32px;
+}
+
+.playlistActionBtns,
+.infoTrackContainer,
+.infoTitleBlock {
+	display: flex;
+}
+
+.playlistActionBtns {
+	width: 100%;
+	height: auto;
+}
+
+.playlistActionBtns > span {
+	position: relative;
+	bottom: -4px;
+	height: inherit;
+	left: -30px;
+}
+
+.playlistActionBtns > div {
+	position: relative;
+	right: 40px;
+	top: 60px;
+}
+
+.infoTrackContainer {
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 30px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	margin-bottom: 15px;
+}
+
+.infoTitleBlock {
+	margin-bottom: 10px;
+	gap: 20px;
+}
+
+.infoTitleBlock span {
+	color: #b3b3b3;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.trackListRow,
+.trackListPlayButton,
+.songInfo,
+.songDuration {
+	display: flex;
+}
+
+.trackListRow {
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px 22px;
+	border-radius: 5px;
+}
+
+.trackListRow:hover {
+	background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.trackListPlayButton {
+	position: relative;
+	align-items: center;
+	gap: 15px;
+	left: -5px;
+}
+
+.trackListPlayButton > span {
+	position: absolute;
+	left: 6px;
+	top: 7px;
+	color: #1ed760;
+}
+
+.trackListPlayButton > button {
+	background: transparent;
+	opacity: 0;
+}
+
+.trackListRow:hover .trackListPlayButton > span {
+	color: transparent;
+}
+
+.trackListRow:hover button {
+	opacity: 1;
+}
+
+.songInfo {
+	flex-direction: column;
+}
+
+.songInfo > span {
+	color: #1ed760;
+}
+
+.songDuration {
+	align-items: center;
+	gap: 30px;
+}
+
+.songDuration svg {
+	position: relative;
+	bottom: 5px;
+}
+
+.songData {
+	margin: 32px 0 0;
+}
+
+.songData > span {
+	font-weight: 600;
+}
+
+.songData span {
+	color: #b3b3b3;
+	display: block;
+}
+
+.songCopyright {
+	font-size: 13px;
+}
+
+.footer {
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 20px 0;
+	margin: 50px 0;
+	width: 100%;
+	box-sizing: border-box;
+}
