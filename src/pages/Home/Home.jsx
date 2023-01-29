@@ -3,57 +3,66 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectSearchTerm } from "../../redux/selectors";
 import GenreBlock from "../../components/common/GenreBlock/GenreBlock";
 import Header from "../../components/Header/Header";
-import { initialGenres } from "../../audioclips/initialGenres/initialGenres";
-
 import styles from "./Home.module.css";
+import axios from "axios";
 
 const Home = () => {
-	const [genres, setGenres] = useState([]);
-	const searchTerm = useSelector(selectSearchTerm);
+    const searchTerm = useSelector(selectSearchTerm);
+    const [isLoading, setIsLoading] = useState(true);
+    const [genres, setGenres] = useState([]);
 
-	useEffect(() => {
-		if (!searchTerm.length) {
-			setGenres(initialGenres);
-		}
+    const dispatch = useDispatch();
 
-		const filteredGenres = initialGenres.reduce((acc, genre) => {
-			const filteredGenre = genre.playlists.filter((playlist) =>
-				playlist.playlistName
-					.toLowerCase()
-					.includes(searchTerm.toLowerCase())
-			);
+    const URL_PLAYLISTS =
+        "https://63ce4f4c6d27349c2b6afb94.mockapi.io/playlists";
 
-			return filteredGenre.length
-				? [...acc, { ...genre, playlists: filteredGenre }]
-				: acc;
-		}, []);
+    useEffect(() => {
+        setIsLoading(true);
+        axios.get(URL_PLAYLISTS).then((res) => {
+            setGenres(res.data);
+            setIsLoading(false);
+        });
+    }, []);
 
-		setGenres(filteredGenres);
-	}, [searchTerm]);
+    // useEffect(() => {
+    //     if (!searchTerm.length) {
+    //         setGenres(initialGenres);
+    //     }
 
-	return (
-		<div className={styles.home}>
-			<Header background="#121212" />
-			{genres.length ? (
-				genres.map((genre) => (
-					<GenreBlock
-						key={genre.id}
-						title={genre.title}
-						playlists={genre.playlists}
-						linkTitle="show all"
-					/>
-				))
-			) : (
-				<div>
-					<h2>No results found for "{searchTerm}"</h2>
-					<p>
-						Please make sure your words are spelled correctly or use
-						less or different keywords.
-					</p>
-				</div>
-			)}
-		</div>
-	);
+    //     const filteredGenres = initialGenres.reduce((acc, genre) => {
+    //         const filteredGenre = genre.playlists.filter((playlist) =>
+    //             playlist.playlistName
+    //                 .toLowerCase()
+    //                 .includes(searchTerm.toLowerCase())
+    //         );
+
+    //         return filteredGenre.length
+    //             ? [...acc, { ...genre, playlists: filteredGenre }]
+    //             : acc;
+    //     }, []);
+
+    //     setGenres(filteredGenres);
+    // }, [searchTerm]);
+
+    return (
+        <div className={styles.home}>
+            <Header />
+            {genres.length ? (
+                genres.map((genre) => (
+                    <GenreBlock
+                        key={genre.id}
+                        title={genre.title}
+                        playlists={genre.playlists}
+                        linkTitle="show all"
+                    />
+                ))
+            ) : (
+                <div>
+                    <h2>No genres</h2>
+                </div>
+            )}
+        </div>
+    );
 };
 
 export default Home;

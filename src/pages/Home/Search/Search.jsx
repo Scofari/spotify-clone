@@ -1,20 +1,47 @@
-import { initialGenres } from "../../../audioclips/initialGenres/initialGenres";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import SearchMusicCard from "../../../components/common/SearchMusicCard/SearchMusicCard";
-import Header from "../../../components/Header/Header";
+import { selectSearchTerm } from "../../../redux/selectors";
 import styles from "./Search.module.css";
 
 function Search() {
-	return (
-		<div className={styles.wrapper}>
-			<Header background="#121212" />
-			<h2>Browse all</h2>
-			<div className={styles.searchContainer}>
-				{initialGenres.map((genre) => (
-					<SearchMusicCard {...genre} />
-				))}
-			</div>
-		</div>
-	);
+    const searchTerm = useSelector(selectSearchTerm);
+    const [genres, setGenres] = useState([]);
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    const dispatch = useDispatch();
+
+    const URL_PLAYLISTS =
+        "https://63ce4f4c6d27349c2b6afb94.mockapi.io/playlists";
+
+    useEffect(() => {
+        setIsLoading(true);
+        axios.get(URL_PLAYLISTS).then((res) => {
+            setGenres(res.data);
+            setIsLoading(false);
+        });
+    }, []);
+
+    return (
+        <div className={styles.wrapper}>
+            <h2>Browse all</h2>
+            <div className={styles.searchContainer}>
+                {genres
+                    .filter(
+                        ({ title }) =>
+                            !searchTerm ||
+                            title
+                                .toLowerCase()
+                                .includes(searchTerm.toLowerCase())
+                    )
+                    .map((genre) => (
+                        <SearchMusicCard key={genre.id} {...genre} />
+                    ))}
+            </div>
+        </div>
+    );
 }
 
 export default Search;
