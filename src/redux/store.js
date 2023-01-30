@@ -4,10 +4,10 @@ import playerReducer from "./playerSlice";
 import playlistsReducer from "./playlistsSlice";
 
 export default configureStore({
-    reducer: {
-        playlists: playlistsReducer,
-        player: playerReducer,
-        default: defaultReducer,
-    },
-    devTools: true,
+	reducer: {
+		playlists: playlistsReducer,
+		player: playerReducer,
+		default: defaultReducer,
+	},
+	devTools: true,
 });

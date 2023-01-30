@@ -10,6 +10,7 @@
 	stroke: #1ed760;
 	stroke-width: 20px;
 	height: 100%;
+	font-size: 65px;
 }
 .button svg:hover {
 	transform: scale(1.06);
