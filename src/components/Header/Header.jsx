@@ -5,6 +5,7 @@ import Button from "../common/Button";
 import NavigationItem from "../common/NavigationItem";
 import SearchInput from "./../SearchInput/SearchInput";
 import NavigationHeaderButton from "./../NavigationHeaderButton/NavigationHeaderButton";
+import MusicCardPlayButton from "../common/MusicCardPlayButton";
 import styles from "./Header.module.css";
 
 const Header = ({ headerBackground, playIsVisible = false }) => {
@@ -39,7 +40,7 @@ const Header = ({ headerBackground, playIsVisible = false }) => {
 				{location.pathname === "/search" && (
 					<SearchInput placeholder="What do you want to listen to?" />
 				)}
-				{playIsVisible && <p>PLAY</p>}
+				{playIsVisible && <MusicCardPlayButton />}
 			</div>
 			<div className={styles.headerNavRight}>
 				{/* <NavigationItem

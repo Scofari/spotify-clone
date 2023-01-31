@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import {
@@ -9,7 +9,6 @@ import Sidebar from "../Sidebar";
 import Header from "../Header";
 import Player from "../Player";
 import styles from "./Layout.module.css";
-import { useRef } from "react";
 
 const step = 1 / 300;
 
@@ -19,6 +18,7 @@ const Layout = () => {
 
 	const [headerBg, setHeaderBg] = useState(headerBackground + "00");
 	const [playIsVisible, setPlayIsVisible] = useState(false);
+
 	const mainSectionRef = useRef(null);
 
 	const handleScroll = (e) => {

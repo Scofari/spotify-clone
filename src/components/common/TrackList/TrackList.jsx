@@ -1,5 +1,4 @@
 // import { NavLink } from "react-router-dom";
-
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BiTime } from "react-icons/bi";
@@ -12,7 +11,7 @@ import TrackListRow from "./../TrackListRow/index";
 import Separator from "../Separator";
 import styles from "./TrackList.module.css";
 
-const TrackList = ({ cover, blockTitle, songTitle, avatar, songsNumber }) => {
+const TrackList = () => {
 	const [isSelected, setIsSelected] = useState(0);
 	const [isActive, setIsActive] = useState(false);
 	// const [isLiked, setIsLiked] = useState(false);

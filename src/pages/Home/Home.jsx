@@ -9,9 +9,6 @@ import styles from "./Home.module.css";
 const Home = () => {
 	const searchTerm = useSelector(selectSearchTerm);
 	const [genres, setGenres] = useState([]);
-	console.log("home genres: ", genres);
-
-	const dispatch = useDispatch();
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -29,21 +26,14 @@ const Home = () => {
 
 	return (
 		<div className={styles.home}>
-			<Header />
-			{genres.length ? (
-				genres.map((genre) => (
-					<GenreBlock
-						key={genre.id}
-						title={genre.title}
-						playlists={genre.playlists}
-						linkTitle="show all"
-					/>
-				))
-			) : (
-				<div>
-					<h2>No genres</h2>
-				</div>
-			)}
+			{genres.map((genre) => (
+				<GenreBlock
+					key={genre.id}
+					title={genre.title}
+					playlists={genre.playlists}
+					linkTitle="show all"
+				/>
+			))}
 		</div>
 	);
 };
