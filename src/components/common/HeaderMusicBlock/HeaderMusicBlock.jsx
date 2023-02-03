@@ -1,21 +1,28 @@
-import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 // import { BiTime } from "react-icons/bi";
 // import { useDispatch, useSelector } from "react-redux";
-
+import { selectCurrentPlaylist } from "./../../../redux/selectors";
+import { likeCover } from "./../../../assets/assorti/index";
 import styles from "./HeaderMusicBlock.module.css";
 
 const HeaderMusicBlock = ({
-	cover,
-	blockTitle = "Playlist",
-	songTitle,
-	avatar = "",
-	songsNumber,
 	likes,
-	avatarName = "Vova Scofari",
+	songTitle,
+	avatarName = "",
 	iconPencil: IconPencil,
 	iconMusic: IconMusic,
 	background = "",
 }) => {
+	const currentPlaylist = useSelector(selectCurrentPlaylist);
+	const { id, playlistCover, playlistDescription, playlistName, tracks } =
+		currentPlaylist;
+
+	console.log("currentPlaylist: ", currentPlaylist);
+
+	console.log("playlistCover: ", playlistCover);
+	const length = tracks.length;
+
 	return (
 		<div style={{ background: background }} className={styles.wrapper}>
 			<div className={styles.playlistInfo}>
@@ -29,23 +36,21 @@ const HeaderMusicBlock = ({
 							</span>
 						</>
 					) : (
-						<img src={cover} alt="cover" />
+						<img src={playlistCover || likeCover} alt="cover" />
 					)}
 				</div>
 				<div className={styles.playlistInfoText}>
-					<h2>{blockTitle}</h2>
-					<h1>{songTitle}</h1>
+					<h2>{tracks ? "Playlist" : "Single"}</h2>
+					<h1>{songTitle || playlistName}</h1>
 					<div className={styles.playlistInfoTextDetails}>
 						<img
 							className={styles.playlistAvatarArtist}
-							src={avatar}
+							src={playlistCover || likeCover}
 							alt="cover"
 						/>
-						{avatarName && <NavLink>{avatarName}</NavLink>}
+						{avatarName && <Link>{playlistDescription}</Link>}
 						{likes && <span>{`${likes} likes`}</span>}
-						{songsNumber && (
-							<span>{`${songsNumber} songs`}</span>
-						)}{" "}
+						{<span>{`${length} songs`}</span>}{" "}
 					</div>
 				</div>
 			</div>

@@ -14,8 +14,6 @@ function CreatePlaylist() {
 				iconPencil={RxPencil1}
 				iconMusic={RiMusic2Line}
 				avatar={artist}
-				avatarName="Vova Scofari"
-				blockTitle="Playlist"
 				songTitle="My Playlist #1"
 				background="linear-gradient(#373737, #121212)"
 			/>

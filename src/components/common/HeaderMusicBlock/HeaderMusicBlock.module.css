@@ -1,98 +1,101 @@
 .wrapper {
-    padding: 92px 24px 32px;
-    box-sizing: content-box;
-    background: linear-gradient(#494949, rgba(0, 0, 0, 0.2));
+	padding: 92px 24px 32px;
+	box-sizing: content-box;
+	background: linear-gradient(#494949, rgba(0, 0, 0, 0.2));
 }
 
 .playlistCover,
 .playlistCover img {
-    width: 232px;
-    height: 232px;
+	width: 232px;
+	height: 232px;
+	object-fit: cover;
 }
 
 .playlistCover {
-    background-color: #282828;
-    position: relative;
-    cursor: default;
+	background-color: #282828;
+	position: relative;
+	cursor: default;
 }
 
 .playlistCover:hover svg:nth-child(1) {
-    opacity: 0;
+	opacity: 0;
 }
 
 .playlistCover svg:nth-child(2) {
-    opacity: 0;
+	opacity: 0;
 }
 
 .playlistCover:hover svg:nth-child(2) {
-    opacity: 1;
+	opacity: 1;
 }
 
 .playlistCover span {
-    font-size: 16px;
-    font-weight: 600;
-    bottom: 30%;
-    left: 25%;
-    line-height: 1px;
-    opacity: 0;
+	font-size: 16px;
+	font-weight: 600;
+	bottom: 30%;
+	left: 25%;
+	line-height: 1px;
+	opacity: 0;
 }
 
 .playlistCover:hover span {
-    opacity: 1;
+	opacity: 1;
 }
 
 .icon {
-    position: absolute;
-    bottom: 35%;
-    left: 35%;
-    fill: rgb(129, 129, 129);
-    font-size: 65px;
+	position: absolute;
+	bottom: 35%;
+	left: 35%;
+	fill: rgb(129, 129, 129);
+	font-size: 65px;
 }
 
 .playlistInfo,
 .playlistInfoTextDetails {
-    display: flex;
+	display: flex;
 }
 
 .playlistInfo {
-    align-items: center;
-    gap: 20px;
+	align-items: center;
+	gap: 20px;
 }
 .playlistInfo h2 {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 .playlistInfoText > h1 {
-    font-size: 96px;
-    margin-bottom: 15px;
+	font-size: 96px;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	line-height: 1;
 }
 
 .playlistInfoTextDetails {
-    font-size: 14px;
-    font-weight: 600;
-    align-items: center;
+	font-size: 14px;
+	font-weight: 600;
+	align-items: center;
 }
 
 .playlistInfoTextDetails a {
-    color: white;
-    text-decoration: none;
-    position: relative;
+	color: white;
+	text-decoration: none;
+	position: relative;
 }
 
 .playlistInfoTextDetails a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .playlistInfoTextDetails > span:before {
-    content: "•";
-    margin: 0 3px;
-    font-size: 15px;
+	content: "•";
+	margin: 0 3px;
+	font-size: 15px;
 }
 
 .playlistAvatarArtist {
-    object-fit: cover;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    margin: 0 5px;
+	object-fit: cover;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	margin: 0 5px;
 }

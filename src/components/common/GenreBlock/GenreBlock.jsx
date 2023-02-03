@@ -1,36 +1,43 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import MusicCard from "../MusicCard";
-import styles from "./GenreBlock.module.css";
 import Skeleton from "./../MusicCard/Skeleton";
+import { selectStatus } from "../../../redux/selectors";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { setPlaylists } from "../../../redux/playlistsSlice";
+// import { axios } from "axios";
+import styles from "./GenreBlock.module.css";
 
 function GenreBlock({ linkTitle = "", title = "", playlists = [] }) {
-	const [isLoading, setIsLoading] = useState(true);
+	// const [genre, setGenre] = useState();
+	const { id } = useParams();
+	const dispatch = useDispatch();
+	const status = useSelector(selectStatus);
+	console.log("playlists: ", playlists);
 
 	useEffect(() => {
-		if (playlists) return setIsLoading(false);
+		dispatch(setPlaylists(playlists));
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [playlists]);
+
+	const skeleton = [...new Array(6)].map((_, idx) => <Skeleton key={idx} />);
 
 	return (
 		<section className={styles.genreBlock}>
 			<div className={styles.titleBlock}>
 				<h2>{title}</h2>
-				<NavLink>{linkTitle}</NavLink>
+				<Link>{linkTitle}</Link>
 			</div>
 			<div className={styles.gridContainer}>
-				{isLoading
-					? [...new Array(6)].map((_, idx) => <Skeleton key={idx} />)
+				{status === "loading"
+					? skeleton
 					: playlists.map((playlist) => (
 							<MusicCard
-								to="/playlist/tracks"
+								to={`/playlist/${playlist.id}`}
 								key={playlist.id}
 								playlist={playlist}
-								playlistName={playlist.playlistName}
-								playlistDescription={
-									playlist.playlistDescription
-								}
-								tracks={playlist.tracks}
-								playlistCover={playlist.playlistCover}
+								id={playlist.id}
+								{...playlist}
 							/>
 					  ))}
 			</div>

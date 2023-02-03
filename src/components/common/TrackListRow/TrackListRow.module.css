@@ -21,8 +21,6 @@
 	background-color: hsla(0, 0%, 100%, 0.1);
 }
 
-
-
 .trackListPlayButton {
 	position: relative;
 	align-items: center;
@@ -62,7 +60,14 @@
 }
 
 .trackInfo h4 {
-	color: #1ed760;
+	/* color: #1ed760; */
+}
+
+.trackInfo span {
+	/* color: #1ed760; */
+	opacity: 0.8;
+	font-weight: 300;
+	font-size: 14px;
 }
 
 .songDuration {

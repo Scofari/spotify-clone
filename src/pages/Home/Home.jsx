@@ -1,41 +1,44 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
 import { selectGenres } from "../../redux/selectors";
 import GenreBlock from "../../components/common/GenreBlock/GenreBlock";
-import { setGenres } from "../../redux/playlistsSlice";
+import { fetchGenres } from "../../redux/playlistsSlice";
+import { selectStatus } from "./../../redux/selectors";
 import styles from "./Home.module.css";
 
 const Home = () => {
-    const genres = useSelector(selectGenres);
-    const dispatch = useDispatch();
+	const dispatch = useDispatch();
+	const status = useSelector(selectStatus);
+	const genres = useSelector(selectGenres);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const { data } = await axios.get(
-                    "https://63ce4f4c6d27349c2b6afb94.mockapi.io/playlists"
-                );
-                dispatch(setGenres(data));
-            } catch (error) {
-                console.log("error: ", error.message);
-            }
-        };
-        fetchData();
-    }, []);
+	useEffect(() => {
+		const fetchData = async () => {
+			dispatch(fetchGenres());
+		};
+		fetchData();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
-    return (
-        <div className={styles.home}>
-            {genres.map((genre) => (
-                <GenreBlock
-                    key={genre.id}
-                    title={genre.title}
-                    playlists={genre.playlists}
-                    linkTitle="show all"
-                />
-            ))}
-        </div>
-    );
+	return (
+		<div className={styles.home}>
+			{status === "error" ? (
+				<div>
+					<h2>Something went wrong 😕</h2>
+					<p>Sorry, no playlists found.</p>
+					<span> Please, try again later</span>
+				</div>
+			) : (
+				genres.map((genre) => (
+					<GenreBlock
+						key={genre.id}
+						title={genre.title}
+						playlists={genre.playlists}
+						linkTitle="show all"
+					/>
+				))
+			)}
+		</div>
+	);
 };
 
 export default Home;

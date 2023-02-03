@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AiFillPauseCircle, AiFillPlayCircle } from "react-icons/ai";
 import { GiPreviousButton, GiNextButton } from "react-icons/gi";
 import { RiRepeat2Fill, RiRepeatOneFill } from "react-icons/ri";
@@ -10,7 +10,10 @@ import VolumeBar from "../VolumeBar";
 import PlaybackBar from "../PlaybackBar";
 import LikeButton from "../common/LikeButton";
 import Tooltip from "../common/Tooltip";
+import { useParams } from "react-router-dom";
 import styles from "./Player.module.css";
+import { selectCurrentPlayingId } from "../../redux/selectors";
+import { setCurrentPlayingId } from "../../redux/playerSlice";
 
 const Player = ({ currentPlaylist }) => {
 	const {
@@ -38,6 +41,21 @@ const Player = ({ currentPlaylist }) => {
 
 	const dispatch = useDispatch();
 	const [isLiked, setIsLiked] = useState(false);
+	// const currentPlayingId = useSelector(selectCurrentPlayingId);
+
+	const onClickPlay = () => {
+		dispatch(setIsPlaying(true));
+		// dispatch(setCurrentPlayingId(currentPlaylist.id));
+	};
+
+	useEffect(() => {
+		if (currentPlaylist) {
+			setNewPlaylist(currentPlaylist.tracks);
+			dispatch(setIsPlaying(true));
+			setCurrentTrackIndex(0);
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [currentPlaylist]);
 
 	useEffect(() => {
 		document.addEventListener("keydown", playOnKeyDown);
@@ -50,15 +68,6 @@ const Player = ({ currentPlaylist }) => {
 			dispatch(setIsPlaying(true));
 		}
 	};
-
-	useEffect(() => {
-		if (currentPlaylist) {
-			setNewPlaylist(currentPlaylist.tracks);
-			dispatch(setIsPlaying(true));
-			setCurrentTrackIndex(0);
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [currentPlaylist]);
 
 	return (
 		<footer className={styles.footerPlayer}>
@@ -104,7 +113,7 @@ const Player = ({ currentPlaylist }) => {
 
 					<Tooltip text={isPlaying ? "Pause" : "Play"}>
 						<IconButton
-							onClick={() => dispatch(setIsPlaying(true))}
+							onClick={() => onClickPlay()}
 							isHoverable
 							isActive
 							size="40px"

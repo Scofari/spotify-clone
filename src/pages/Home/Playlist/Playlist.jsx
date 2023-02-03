@@ -1,93 +1,46 @@
-import { NavLink } from "react-router-dom";
-
-import { BiTime } from "react-icons/bi";
-import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AiFillPauseCircle, AiFillPlayCircle } from "react-icons/ai";
-import LikeButton from "./../../../components/common/LikeButton/LikeButton";
-import MusicCardPlayButton from "../../../components/common/MusicCardPlayButton";
-
-// import { setCurrentPlaylist } from "../../../redux/playlistsSlice";
-import { selectIsPlaying } from "../../../redux/selectors";
-import Tooltip from "../../../components/common/Tooltip";
-import GenreBlock from "./../../../components/common/GenreBlock/index";
-import { vovaScofariTracks as genres } from "./../../../audioclips/vovaScofariTracks";
-import HeaderMusicBlock from "../../../components/common/HeaderMusicBlock/HeaderMusicBlock";
+import { useParams } from "react-router-dom";
+// import axios from "axios";
+import HeaderMusicBlock from "../../../components/common/HeaderMusicBlock";
+import TrackList from "../../../components/common/TrackList";
+import { setHeaderBackground } from "../../../redux/defaultSlice";
+// import { selectCurrentPlaylist } from "./../../../redux/selectors";
+import { setCurrentPlaylist } from "../../../redux/playlistsSlice";
+import { selectCurrentPlaylist } from "../../../redux/selectors";
 import styles from "./Playlist.module.css";
 
 function Playlist() {
-	// const dispatch = useDispatch();
-	const isPlaying = useSelector(selectIsPlaying);
+	const dispatch = useDispatch();
+	const { id } = useParams();
+	const currentPlaylist = useSelector(selectCurrentPlaylist);
+	// const currentPlaylist = useSelector(selectCurrentPlaylist);
+
+	console.log("id: ", id);
+
+	useEffect(() => {
+		dispatch(setHeaderBackground("#19152A"));
+		return () => {
+			dispatch(setHeaderBackground("#121212"));
+		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
+	// useEffect(() => {
+	// 	dispatch(setCurrentPlaylist(currentPlaylist));
+	// 	// eslint-disable-next-line react-hooks/exhaustive-deps
+	// }, [currentPlaylist]);
 
 	return (
-		<div className={styles.playlist}>
-			{genres.length &&
-				genres.map((genre) => (
-					<>
-						<HeaderMusicBlock
-							cover={genre.tracks[0].playlistCover}
-						/>
-						<div className={styles.playlistActionBtns}>
-							<MusicCardPlayButton
-								icon={
-									isPlaying
-										? AiFillPauseCircle
-										: AiFillPlayCircle
-								}
-								size="140px"
-								// onClick={() =>
-								// 	dispatch(setCurrentPlaylist({ id, tracks, isPlaying }))
-								// }
-							/>
-							<LikeButton size="35px" />
-						</div>
-						<div className={styles.infoTrackContainer}>
-							<div className={styles.infoTitleBlock}>
-								<span>#</span>
-								<span>title</span>
-							</div>
-							<Tooltip text="duration">
-								<BiTime />
-							</Tooltip>
-						</div>
-
-						<div className={styles.trackListRow}>
-							<div className={styles.trackListPlayButton}>
-								<span>1</span>
-								<button>
-									<BsFillPlayFill size={25} />
-								</button>
-								<div className={styles.songInfo}>
-									<span>На чиле</span>
-									<p>Vova Scofari</p>
-								</div>
-							</div>
-							<div className={styles.songDuration}>
-								<LikeButton size="15px" />
-								<span>2:05</span>
-							</div>
-						</div>
-
-						<div className={styles.songData}>
-							<span>August 5, 2022</span>
-							<div className={styles.songCopyright}>
-								<span>© 2022 FAAAYKE</span>
-								<span>© 2022 FAAAYKE</span>
-							</div>
-						</div>
-
-						<div>
-							<GenreBlock
-								playlists={genre.tracks}
-								key={genre.id}
-								// playlists={genre.playlists}
-								title="More by Vova Scofari"
-								linkTitle="see discography"
-							/>
-						</div>
-					</>
-				))}
-			<footer className={styles.footer}></footer>
+		<div className={styles.wrapper}>
+			<HeaderMusicBlock
+				blockTitle="Playlist"
+				songTitle="Liked Songs"
+				avatarName="Vova Scofari"
+				title="Liked Songs"
+				background="linear-gradient(#3B2A73, #121212)"
+			/>
+			<TrackList />
 		</div>
 	);
 }

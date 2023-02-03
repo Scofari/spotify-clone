@@ -1,6 +1,5 @@
 // import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 import { BiTime } from "react-icons/bi";
 // import LikeButton from "./../../../components/common/LikeButton/LikeButton";
 import MusicCardPlayButton from "../../../components/common/MusicCardPlayButton";
@@ -9,28 +8,17 @@ import GenreBlock from "./../../../components/common/GenreBlock/index";
 import Tooltip from "../../../components/common/Tooltip";
 import TrackListRow from "./../TrackListRow/index";
 import Separator from "../Separator";
+import { useSelector } from "react-redux";
+import { selectGenres } from "../../../redux/selectors";
+import { selectCurrentPlaylist } from "./../../../redux/selectors";
 import styles from "./TrackList.module.css";
 
 const TrackList = () => {
 	const [isSelected, setIsSelected] = useState(0);
 	const [isActive, setIsActive] = useState(false);
-	// const [isLiked, setIsLiked] = useState(false);
-	const [genres, setGenres] = useState([]);
-	console.log("genres: ", genres);
-
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const { data } = await axios.get(
-					"https://63ce4f4c6d27349c2b6afb94.mockapi.io/playlists"
-				);
-				setGenres(data);
-			} catch (error) {
-				console.log("error: ", error.message);
-			}
-		};
-		fetchData();
-	}, []);
+	const genres = useSelector(selectGenres);
+	const currentPlaylist = useSelector(selectCurrentPlaylist);
+	console.log("tracks: ", currentPlaylist);
 
 	const toggleBackground = (i) => {
 		setIsSelected(i);
@@ -55,20 +43,19 @@ const TrackList = () => {
 					<span>#</span>
 					<span>title</span>
 				</div>
-				<span>album</span>
-				<span>date added</span>
+				{/* <span>album</span> */}
 				<Tooltip text="duration">
 					<BiTime />
 				</Tooltip>
 			</div>
 			<Separator margin="5px 0 20px" />
-			{genres.map((genre, index) => (
+			{currentPlaylist.tracks.map((track, index) => (
 				<TrackListRow
-					key={genre.id}
+					key={track.id}
 					onClick={() => toggleBackground(index)}
 					isActive={isSelected === index && isActive && styles.active}
-					cover={genre.playlistImg}
 					index={index + 1}
+					{...track}
 				/>
 			))}
 			<Separator margin="80px 0px" />

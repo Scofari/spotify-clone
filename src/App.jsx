@@ -6,6 +6,7 @@ import NotFound from "./pages/Home/NotFound";
 import YourLibrary from "./pages/Home/YourLibrary/index";
 import CreatePlaylist from "./pages/Home/CreatePlaylist/CreatePlaylist";
 import LikedSongs from "./pages/Home/LikedSongs";
+import Playlist from "./pages/Home/Playlist";
 import styles from "./App.module.css";
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
 						path="collection/playlists"
 						element={<YourLibrary />}
 					/>
+					<Route path="/playlist/:id" element={<Playlist />} />
 					<Route path="/playlist" element={<CreatePlaylist />} />
-					<Route path="/playlist/tracks" element={<LikedSongs />} />
 					<Route path="/collection/tracks" element={<LikedSongs />} />
 					<Route path="/search" element={<Search />} />
 					<Route path="*" element={<NotFound />} />

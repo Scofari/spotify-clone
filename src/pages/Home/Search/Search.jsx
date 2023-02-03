@@ -1,29 +1,16 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import SearchMusicCard from "../../../components/common/SearchMusicCard/SearchMusicCard";
 import { selectSearchTerm } from "../../../redux/selectors";
+import { selectGenres } from "./../../../redux/selectors";
 import styles from "./Search.module.css";
 
 function Search() {
 	const searchTerm = useSelector(selectSearchTerm);
-	const [genres, setGenres] = useState([]);
 
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const { data } = await axios.get(
-					"https://63ce4f4c6d27349c2b6afb94.mockapi.io/playlists"
-				);
-				setGenres(data);
-			} catch (error) {
-				console.log("error: ", error.message);
-			}
-		};
-		fetchData();
-	}, []);
+	const genres = useSelector(selectGenres);
+	console.log("genres: ", genres);
 
 	return (
 		<div className={styles.wrapper}>
@@ -38,7 +25,9 @@ function Search() {
 								.includes(searchTerm.toLowerCase())
 					)
 					.map((genre) => (
-						<SearchMusicCard key={genre.id} {...genre} />
+						<Link to="/" key={genre.id}>
+							<SearchMusicCard {...genre} />
+						</Link>
 					))}
 			</div>
 		</div>

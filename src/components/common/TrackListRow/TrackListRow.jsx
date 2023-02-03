@@ -8,12 +8,11 @@ import { selectIsPlaying } from "../../../redux/selectors";
 import styles from "./TrackListRow.module.css";
 
 const TrackListRow = ({
+	id,
 	index,
 	cover,
-	blockTitle,
-	songTitle,
-	avatar,
-	songs,
+	author,
+	title,
 	isActive,
 	onClick,
 }) => {
@@ -35,13 +34,12 @@ const TrackListRow = ({
 					<img src={cover} alt="cover" />
 					<div className={styles.trackInfo}>
 						<div className={styles.trackDescription}>
-							<h4>На чиле</h4>
-							<p>Vova Scofari</p>
+							<h4>{title}</h4>
+							<span>{author}</span>
 						</div>
 					</div>
 				</div>
-				<span>Vova Scofari</span>
-				<span>1 day ago</span>
+				{/* <span>{author}</span> */}
 				<div className={styles.songDuration}>
 					<LikeButton
 						onClick={() => setIsLiked((prev) => !prev)}

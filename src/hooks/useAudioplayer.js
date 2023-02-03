@@ -38,9 +38,9 @@ const useAudioplayer = () => {
 	const isPlaying = useSelector(selectIsPlaying);
 
 	const setNewPlaylist = (playlist) => {
+		console.log("playlist: ", playlist);
 		setInitialPlaylist(playlist);
 		setPlaylist(playlist);
-		dispatch(setIsPlaying(true));
 	};
 
 	useEffect(() => {
