@@ -10,8 +10,9 @@ function YourLibrary() {
 				<MusicCard
 					height="270px"
 					playlistName="My Playlist#1"
-					playlistDescription="by Vladimir Scofari"
+					playlistDescription="by Spotify"
 					icon={RiMusic2Line}
+					tracks={false}
 				/>
 			</div>
 		</div>

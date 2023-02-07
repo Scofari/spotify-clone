@@ -1,7 +1,5 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-// import { BiTime } from "react-icons/bi";
-// import { useDispatch, useSelector } from "react-redux";
 import { selectCurrentPlaylist } from "./../../../redux/selectors";
 import { likeCover } from "./../../../assets/assorti/index";
 import styles from "./HeaderMusicBlock.module.css";
@@ -18,9 +16,6 @@ const HeaderMusicBlock = ({
 	const { id, playlistCover, playlistDescription, playlistName, tracks } =
 		currentPlaylist;
 
-	console.log("currentPlaylist: ", currentPlaylist);
-
-	console.log("playlistCover: ", playlistCover);
 	const length = tracks.length;
 
 	return (

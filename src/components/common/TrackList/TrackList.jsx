@@ -1,14 +1,12 @@
 // import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { BiTime } from "react-icons/bi";
-// import LikeButton from "./../../../components/common/LikeButton/LikeButton";
 import MusicCardPlayButton from "../../../components/common/MusicCardPlayButton";
 import GenreBlock from "./../../../components/common/GenreBlock/index";
-
 import Tooltip from "../../../components/common/Tooltip";
 import TrackListRow from "./../TrackListRow/index";
 import Separator from "../Separator";
-import { useSelector } from "react-redux";
 import { selectGenres } from "../../../redux/selectors";
 import { selectCurrentPlaylist } from "./../../../redux/selectors";
 import styles from "./TrackList.module.css";
@@ -18,7 +16,6 @@ const TrackList = () => {
 	const [isActive, setIsActive] = useState(false);
 	const genres = useSelector(selectGenres);
 	const currentPlaylist = useSelector(selectCurrentPlaylist);
-	console.log("tracks: ", currentPlaylist);
 
 	const toggleBackground = (i) => {
 		setIsSelected(i);
@@ -32,18 +29,12 @@ const TrackList = () => {
 		>
 			<div className={styles.playlistActionBtns}>
 				<MusicCardPlayButton genres={genres} />
-				{/* <LikeButton
-					onClick={() => setIsLiked((prev) => !prev)}
-					isLiked={isLiked}
-					size="35px"
-				/> */}
 			</div>
 			<div className={styles.infoTitleBlock}>
 				<div>
 					<span>#</span>
 					<span>title</span>
 				</div>
-				{/* <span>album</span> */}
 				<Tooltip text="duration">
 					<BiTime />
 				</Tooltip>
@@ -59,14 +50,7 @@ const TrackList = () => {
 				/>
 			))}
 			<Separator margin="80px 0px" />
-			{/*
-			<div className={styles.songData}>
-				<span>August 5, 2022</span>
-				<div className={styles.songCopyright}>
-					<span>© 2022 FAAAYKE</span>
-					<span>© 2022 FAAAYKE</span>
-				</div>
-			</div> */}
+
 			{genres &&
 				genres.map((genre) => (
 					<div key={genre.id}>

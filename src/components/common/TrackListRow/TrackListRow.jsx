@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { BiTime } from "react-icons/bi";
 import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import LikeButton from "../LikeButton/LikeButton";
 import { selectIsPlaying } from "../../../redux/selectors";
 import styles from "./TrackListRow.module.css";
@@ -39,7 +37,6 @@ const TrackListRow = ({
 						</div>
 					</div>
 				</div>
-				{/* <span>{author}</span> */}
 				<div className={styles.songDuration}>
 					<LikeButton
 						onClick={() => setIsLiked((prev) => !prev)}

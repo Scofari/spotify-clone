@@ -9,12 +9,7 @@ const formatTime = (durationInSeconds) => {
 	return `${minutes}:${seconds.padStart(2, 0)}`;
 };
 
-const PlaybackBar = ({
-	audioRef,
-	duration = 0,
-	currentTime,
-	setCurrentTime,
-}) => {
+const PlaybackBar = ({ duration = 0, currentTime, setCurrentTime }) => {
 	const formattedDuration = useMemo(() => formatTime(duration), [duration]);
 	const formattedCurrentTime = useMemo(
 		() => formatTime(currentTime),

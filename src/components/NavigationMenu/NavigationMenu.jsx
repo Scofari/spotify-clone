@@ -17,11 +17,11 @@ const NavigationMenu = () => {
 						to="/search"
 						title="Search"
 					/>
-					<NavigationItem
+					{/* <NavigationItem
 						icon={VscLibrary}
 						to="/collection/playlists"
 						title="Your Library"
-					/>
+					/> */}
 				</>
 			</NavigationSubmenu>
 			<NavigationSubmenu>

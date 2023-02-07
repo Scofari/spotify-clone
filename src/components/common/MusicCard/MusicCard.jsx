@@ -1,13 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MusicCardPlayButton from "../MusicCardPlayButton";
-import { setCurrentPlayingId, setIsPlaying } from "../../../redux/playerSlice";
+import { setIsPlaying } from "../../../redux/playerSlice";
 import { setCurrentPlaylist } from "../../../redux/playlistsSlice";
 import {
 	selectCurrentPlayingId,
 	selectCurrentPlaylist,
 	selectIsPlaying,
-	selectPlaylists,
 } from "../../../redux/selectors";
 import styles from "./MusicCard.module.css";
 
@@ -33,13 +32,8 @@ function MusicCard({
 	};
 
 	const currentIsPlaying = currentPlaylist.tracks.find(({ id }) => {
-		console.log("currentPlayingId: ", currentPlayingId);
-		console.log("id: ", id);
-
-		return currentPlayingId === id;
+		return currentPlayingId !== id;
 	});
-
-	console.log("currentIsPlaying: ", currentIsPlaying);
 
 	return (
 		<div style={{ height: height }} className={styles.musicCard}>

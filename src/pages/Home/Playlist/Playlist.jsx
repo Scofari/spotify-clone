@@ -1,22 +1,12 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-// import axios from "axios";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import HeaderMusicBlock from "../../../components/common/HeaderMusicBlock";
 import TrackList from "../../../components/common/TrackList";
 import { setHeaderBackground } from "../../../redux/defaultSlice";
-// import { selectCurrentPlaylist } from "./../../../redux/selectors";
-import { setCurrentPlaylist } from "../../../redux/playlistsSlice";
-import { selectCurrentPlaylist } from "../../../redux/selectors";
 import styles from "./Playlist.module.css";
 
 function Playlist() {
 	const dispatch = useDispatch();
-	const { id } = useParams();
-	const currentPlaylist = useSelector(selectCurrentPlaylist);
-	// const currentPlaylist = useSelector(selectCurrentPlaylist);
-
-	console.log("id: ", id);
 
 	useEffect(() => {
 		dispatch(setHeaderBackground("#19152A"));
@@ -25,11 +15,6 @@ function Playlist() {
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
-
-	// useEffect(() => {
-	// 	dispatch(setCurrentPlaylist(currentPlaylist));
-	// 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	// }, [currentPlaylist]);
 
 	return (
 		<div className={styles.wrapper}>

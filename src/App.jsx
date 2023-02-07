@@ -3,7 +3,7 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import Search from "./pages/Home/Search";
 import NotFound from "./pages/Home/NotFound";
-import YourLibrary from "./pages/Home/YourLibrary/index";
+// import YourLibrary from "./pages/Home/YourLibrary/index";
 import CreatePlaylist from "./pages/Home/CreatePlaylist/CreatePlaylist";
 import LikedSongs from "./pages/Home/LikedSongs";
 import Playlist from "./pages/Home/Playlist";
@@ -15,10 +15,10 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
-					<Route
+					{/* <Route
 						path="collection/playlists"
 						element={<YourLibrary />}
-					/>
+					/> */}
 					<Route path="/playlist/:id" element={<Playlist />} />
 					<Route path="/playlist" element={<CreatePlaylist />} />
 					<Route path="/collection/tracks" element={<LikedSongs />} />

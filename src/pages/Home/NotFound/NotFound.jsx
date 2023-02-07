@@ -1,4 +1,3 @@
-// import { NavLink } from "react-router-dom";
 import Header from "../../../components/Header";
 import NavigationItem from "./../../../components/common/NavigationItem/index";
 import styles from "./NotFound.module.css";
@@ -26,8 +25,6 @@ function NotFound() {
 							title="Help"
 							className={styles.center}
 						/>
-						{/* <NavLink></NavLink>
-					<NavLink></NavLink> */}
 					</div>
 				</div>
 			</div>

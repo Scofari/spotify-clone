@@ -38,7 +38,6 @@ const useAudioplayer = () => {
 	const isPlaying = useSelector(selectIsPlaying);
 
 	const setNewPlaylist = (playlist) => {
-		console.log("playlist: ", playlist);
 		setInitialPlaylist(playlist);
 		setPlaylist(playlist);
 	};
@@ -194,10 +193,6 @@ const useAudioplayer = () => {
 
 		setPlaylist(shuffled);
 		dispatch(setIsPlaying(true));
-
-		// if (isPlaying) {
-		// 	audioRef?.current.play();
-		// }
 	};
 
 	return {

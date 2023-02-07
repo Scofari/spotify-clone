@@ -8,7 +8,6 @@ const LikeButton = ({ onClick, isLiked = false, size }) => {
 			text={isLiked ? "Remove from Your Library" : "Save to Your Library"}
 		>
 			<button
-				// data-
 				onClick={onClick}
 				className={`${styles.likeButton}  ${
 					isLiked ? styles.isLiked : ""
