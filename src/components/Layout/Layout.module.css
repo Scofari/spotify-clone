@@ -1,6 +1,7 @@
 .mainSection {
-	width: calc(100vw - 230px);
-	height: calc(100vh - 10px);
-	margin-left: 230px;
-	overflow-y: auto;
+    width: calc(100vw - 230px);
+    height: calc(100vh - 90px);
+    margin-left: 230px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

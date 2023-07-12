@@ -1,107 +1,107 @@
 [
-	{
-		"title": "Unity",
-		"author": "Alan Walker",
-		"id": 73,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130173805985792/Alan_x_Walkers_-_UnityMP3_160K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "Lost Control",
-		"author": "Alan Walker",
-		"id": 70,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130131912228874/Alan_Walker_Lost_Control_Lyrics_ft._SoranaMP3_160K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "Heading Home",
-		"author": "Alan Walker ,Ruben",
-		"id": 66,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130090208133120/Alan_Walker___Ruben_Heading_Home_Official_MusicMP3_160K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "Strongest",
-		"author": "Alan Walker ,Ina Wroldsen",
-		"id": 63,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130079047221268/Alan_Walker___Ina_Wroldsen_-_Strongest_LyricsMP3_160K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "Ghost",
-		"author": "Au/Ra, Alan Walker",
-		"id": 58,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130010088669204/Au_Ra__Alan_Walker_-_Ghost_Official_VideoMP3_160K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5eb2eac2bd8d035f71531b0c08d"
-	},
-	{
-		"title": "Alone pt II/2 ",
-		"author": "Alan Walker",
-		"id": 54,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129915348385822/Alan_Walker___Ava_Max_-_Alone__Pt._IIMP3_128K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "PLAY",
-		"author": "Alan Walker ft Tungevaag",
-		"id": 52,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129886810603530/Alan_Walker__K-391__Tungevaag__Mangoo_-_PLAY_AlanMP3_160K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "On my Way",
-		"author": "Alan Walker",
-		"id": 44,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129671055605760/Alan_Walker__Sabrina_Carpenter___Farruko_-_On_MyMP3_128K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "The Spectre",
-		"author": "Alan Walker",
-		"id": 37,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129468789358593/Alan_Walker_-_The_SpectreMP3_128K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "Faded",
-		"author": "Alan Walker",
-		"id": 36,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129443250503720/Alan_Walker_-_FadedMP3_128K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "Sing me to sleep",
-		"author": "Alan Walker",
-		"id": 34,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129242318176266/Alan_Walker_-_Sing_Me_To_SleepMP3_128K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "End of time",
-		"author": "Alan Walker",
-		"id": 35,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129275322761236/K-391__Alan_Walker___Ahrix_-_End_of_Time_OfficialMP3_128K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "Alone",
-		"author": "Alan Walker",
-		"id": 31,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/782126454690938890/Alan_Walker_-_AloneMP3_128K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "Fade-NCS Release",
-		"author": "Alan Walker",
-		"id": 1,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/775741536591806484/Alan_Walker_-_Fade_NCS_ReleaseMP3_160K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	},
-	{
-		"title": "Sing me to sleep",
-		"author": "Alan Walker",
-		"id": 0,
-		"sound": "https://cdn.discordapp.com/attachments/775740994595323954/775741533789224960/Alan_Walker_-_Sing_Me_To_SleepMP3_160K.mp3",
-		"cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-	}
+    {
+        "title": "Unity",
+        "author": "Alan Walker",
+        "id": "73",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130173805985792/Alan_x_Walkers_-_UnityMP3_160K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "Lost Control",
+        "author": "Alan Walker",
+        "id": "70",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130131912228874/Alan_Walker_Lost_Control_Lyrics_ft._SoranaMP3_160K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "Heading Home",
+        "author": "Alan Walker ,Ruben",
+        "id": "66",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130090208133120/Alan_Walker___Ruben_Heading_Home_Official_MusicMP3_160K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "Strongest",
+        "author": "Alan Walker ,Ina Wroldsen",
+        "id": "63",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130079047221268/Alan_Walker___Ina_Wroldsen_-_Strongest_LyricsMP3_160K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "Ghost",
+        "author": "Au/Ra, Alan Walker",
+        "id": "58",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782130010088669204/Au_Ra__Alan_Walker_-_Ghost_Official_VideoMP3_160K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5eb2eac2bd8d035f71531b0c08d"
+    },
+    {
+        "title": "Alone pt II/2 ",
+        "author": "Alan Walker",
+        "id": "54",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129915348385822/Alan_Walker___Ava_Max_-_Alone__Pt._IIMP3_128K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "PLAY",
+        "author": "Alan Walker ft Tungevaag",
+        "id": "52",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129886810603530/Alan_Walker__K-391__Tungevaag__Mangoo_-_PLAY_AlanMP3_160K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "On my Way",
+        "author": "Alan Walker",
+        "id": "44",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129671055605760/Alan_Walker__Sabrina_Carpenter___Farruko_-_On_MyMP3_128K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "The Spectre",
+        "author": "Alan Walker",
+        "id": "37",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129468789358593/Alan_Walker_-_The_SpectreMP3_128K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "Faded",
+        "author": "Alan Walker",
+        "id": "36",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129443250503720/Alan_Walker_-_FadedMP3_128K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "Sing me to sleep",
+        "author": "Alan Walker",
+        "id": "34",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129242318176266/Alan_Walker_-_Sing_Me_To_SleepMP3_128K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "End of time",
+        "author": "Alan Walker",
+        "id": "35",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782129275322761236/K-391__Alan_Walker___Ahrix_-_End_of_Time_OfficialMP3_128K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "Alone",
+        "author": "Alan Walker",
+        "id": "31",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/782126454690938890/Alan_Walker_-_AloneMP3_128K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "Fade-NCS Release",
+        "author": "Alan Walker",
+        "id": "1",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/775741536591806484/Alan_Walker_-_Fade_NCS_ReleaseMP3_160K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    },
+    {
+        "title": "Sing me to sleep",
+        "author": "Alan Walker",
+        "id": "0",
+        "sound": "https://cdn.discordapp.com/attachments/775740994595323954/775741533789224960/Alan_Walker_-_Sing_Me_To_SleepMP3_160K.mp3",
+        "cover": "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
+    }
 ]

@@ -1,33 +1,33 @@
 .home {
-	background-color: #121212;
-	font-size: 20px;
+    background-color: #121212;
+    font-size: 20px;
 
-	min-height: 100vh;
-	padding: 62px 24px 32px;
-	position: relative;
+    min-height: 100vh;
+    padding: 62px 24px 32px;
+    position: relative;
 }
 
 .home > div {
-	transform: translateY(200%);
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	gap: 20px;
+    transform: translateY(200%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .home > div h2 {
-	font-size: 22px;
+    font-size: 22px;
 }
 
 .home > div p {
-	font-size: 16px;
-	font-weight: 600;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .home > div span {
-	font-size: 14px;
+    font-size: 14px;
 }
 
 .home a {
-	text-decoration: none;
+    text-decoration: none;
 }

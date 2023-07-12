@@ -1,60 +1,59 @@
 .musicCard {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	background: #181818;
-	border-radius: 5px;
-	padding: 15px;
-	width: 192px;
-	height: 270px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	cursor: pointer;
-	transition: background 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #181818;
+    border-radius: 5px;
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .musicCard:hover {
-	background: #222222;
+    background: #222222;
 }
 
 .musicCard:hover .button {
-	transform: translateY(-15%);
-	opacity: 100;
+    transform: translateY(-15%);
+    opacity: 100;
 }
 
 .musicCard .button {
-	transition: all 0.2s ease-in-out;
-	opacity: 0;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
 }
 
 .musicCard a img {
-	height: 160px;
-	width: 160px;
-	object-fit: cover;
-	margin-bottom: 12px;
-	border-radius: 5px;
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border-radius: 5px;
 }
 
 .musicCard a > svg {
-	height: 160px;
-	transform: translate(80%, 10%);
-	margin-bottom: 12px;
-	font-size: 60px;
+    height: 160px;
+    transform: translate(80%, 10%);
+    margin-bottom: 12px;
+    font-size: 60px;
 }
 
 .musicCard span {
-	line-height: 2;
-	font-weight: bold;
-	font-size: 16px;
-	color: white;
-	text-decoration: none;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    line-height: 2;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .musicCard p {
-	font-size: 14px;
-	opacity: 0.8;
-	line-height: 1.8;
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.8;
 }
